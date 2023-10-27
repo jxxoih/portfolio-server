@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8.0.30
+    env_file:
+      - ./env/.env.db
+    volumes:
+      - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
+      - /etc/localtime:/etc/localtime
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3380:3306
+
+volumes:
+  mysql_data:

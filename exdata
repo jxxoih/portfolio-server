@@ -1,0 +1,91 @@
+
+-- select query
+
+-- about
+select p_name, p_birth, p_description, p_about_title, p_about_context from profile where p_id = 1
+
+-- skill   vc, comm 어떻게 가져올지 고민 필요
+select DISTINCT s.s_type, s.s_name, s.s_img from project_skill as ps INNER JOIN skill as s ON ps.s_id = s.s_id
+-- select p.pro_id, pro_name, pro_position, pro_detail, pro_start_date, pro_end_date, ps.s_id, s_name, s_type from project as p
+-- inner join project_skill as ps on p.pro_id = ps.pro_id
+-- inner join skill as s on ps.s_id = s.s_id
+
+-- work
+-- 3번 select 필요
+-- company
+select w_id, company_nm, w_start_date, w_end_date from `work` where p_id = 1
+-- project
+select pro_id, w_id, pro_position, pro_detail, pro_start_date, pro_end_date from `project` where p_id = 1
+-- project skill
+select DISTINCT ps.pro_id, ps.s_id, s.s_name, s.s_type from `project_skill` as ps
+inner join `skill` as s ON ps.s_id = s.s_id
+where p_id = 1 order by pro_id, s_id, s_type ASC
+
+
+-- work 구조 이런식으로 되야함
+{company: [
+    0: {
+        w_id: 1,
+        company: "주식회사키키",
+        w_start_date: "2022-04-01",
+        w_end_date: "2023-01-01",
+        project: [
+            {
+                pro_id: 1,
+                w_id: 1,
+                pro_position: 0,
+                pro_detail: "기능개발 및 유지보수",
+                pro_start_date: "2022-04-01",
+                pro_end_date: "2022-12-31",
+                project_skill: [
+                    {
+                        pro_id: 1,
+                        s_id: 1,
+                        s_name: "HTML",
+                        s_type: 1
+                    },
+                    {
+                        pro_id: 1,
+                        s_id: 2,
+                        s_name: "CSS",
+                        s_type: 1
+                    },
+                    {
+                        pro_id: 1,
+                        s_id: 3,
+                        s_name: "JavaScript",
+                        s_type: 1
+                    }
+                ]
+            },
+            {
+              pro_id: 2,
+                w_id: 1,
+                pro_position: 0,
+                pro_detail: "기능개발 및 유지보수",
+                pro_start_date: "2022-04-01",
+                pro_end_date: "2022-12-31",
+                project_skill: [
+                    {
+                        pro_id: 1,
+                        s_id: 1,
+                        s_name: "HTML",
+                        s_type: 1
+                    },
+                    {
+                        pro_id: 1,
+                        s_id: 2,
+                        s_name: "CSS",
+                        s_type: 1
+                    },
+                    {
+                        pro_id: 1,
+                        s_id: 3,
+                        s_name: "JavaScript",
+                        s_type: 1
+                    }
+                ]  
+            }
+        ]
+    }, 
+]}
