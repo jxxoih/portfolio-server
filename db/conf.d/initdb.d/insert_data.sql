@@ -3,11 +3,11 @@ VALUES ('강지호', '01012345678','19990219', '개발자 강지호입니다.', 
 풀스택 개발자가 목표인 강지호입니다.', 'jxxoih','jxxo.ih@gmail.com');
 
 
-INSERT INTO `work` (p_id, company_nm, emp_status, w_start_date, w_end_date, use_status)
+INSERT INTO `company` (p_idx, company_nm, emp_status, w_start_date, w_end_date, use_status)
 VALUES (1, '주식회사키키', 1, '2022-04-04', '2023-01-01', 1),
 (1, '제이앤제이', 1, '2023-01-02', '2023-06-30', 1);
 
-INSERT INTO `project` (p_id, w_id, pro_name, pro_position, pro_detail, pro_start_date, pro_end_date,pro_url, use_status)
+INSERT INTO `project` (p_idx, c_idx, pro_name, pro_position, pro_detail, pro_start_date, pro_end_date,pro_url, use_status)
 VALUES
 (1, 1, '키키 사장님페이지', 0, '기능개발 및 유지 보수', '2022-04-01', '2022-12-31', '', 1),
 (1, 1, '키키 관리자페이지', 0, '기능개발 및 유지 보수', '2022-04-01', '2022-12-31', '', 1),
@@ -18,7 +18,7 @@ VALUES
 (1, 2, '(주)대화공업 홈페이지', 1, '디자인 외 모든작업', '2023-01-02', '2023-02-01', 'https://devziho.shop', 1),
 (1, 2, '사내메신저 프로그램', 1, '일부 UI 작업', '2023-05-01', '2023-06-01', '', 1);
 
-INSERT INTO `project_skill` (p_id, pro_id, s_id)
+INSERT INTO `project_skill` (p_idx, pro_idx, s_idx)
 VALUES
 (1, 1, 1),
 (1, 1, 2),
@@ -52,7 +52,7 @@ VALUES
 (1, 8, 14);
 
 
-INSERT INTO `skill` (s_name, s_img, sf_id)
+INSERT INTO `skill` (s_name, s_img, sf_idx)
 VALUES
 ("HTML", "html.png", 1),
 ("CSS", "css.png", 1),
