@@ -3,6 +3,7 @@ CREATE TABLE `profile`
     `p_idx` INT NOT NULL AUTO_INCREMENT COMMENT '고유번호',
     `p_name` VARCHAR(10) NOT NULL COMMENT '이름',
     `p_contact` VARCHAR(11) NULL COMMENT '연락처',
+    `p_auth_pwd` VARCHAR(10) NOT NULL COMMENT '관리자페이지 이동시 사용하는 비밀번호',
     `p_github` VARCHAR(50) NOT NULL COMMENT '깃허브 닉네임',
     `p_email` VARCHAR(50) NOT NULL COMMENT '이메일',
     `p_birth` INT(8) NOT NULL COMMENT '생년월일 8자',
@@ -85,3 +86,13 @@ CREATE TABLE `position`
     `created_at`  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '생성 일시',
     PRIMARY KEY (`pos_idx`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='POSITON MAPPING';
+
+CREATE TABLE `state_mng`
+(
+    `sm_idx` INT NOT NULL AUTO_INCREMENT COMMENT '고유번호',
+    `p_idx` INT NOT NULL COMMENT '사용자 고유번호',
+    `sm_state` TINYINT(0) UNSIGNED COMMENT '사용여부 1 = 사용, 0 = 사용안함',
+    `updated_at`   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '수정 일시',
+    `created_at`  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '생성 일시',
+    PRIMARY KEY (`sm_idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='STATE MANAGEMENT';
