@@ -1,5 +1,5 @@
-INSERT INTO `profile` (p_name, p_contact, p_birth, p_description, p_about_title, p_about_context, p_github,p_email)
-VALUES ('강지호', '01012345678','19990219', '개발자 강지호입니다.', '2년차 개발자', '백엔드 개발자로 일을 시작했지만 프론트에 흥미를 느껴 프론트, 백엔드를 같이 개발, 공부하고 있는 
+INSERT INTO `profile` (p_name, p_contact, p_auth_pwd, p_birth, p_description, p_about_title, p_about_context, p_github,p_email)
+VALUES ('강지호', '01012345678','0219', '19990219', '개발자 강지호입니다.', '2년차 개발자', '백엔드 개발자로 일을 시작했지만 프론트에 흥미를 느껴 프론트, 백엔드를 같이 개발, 공부하고 있는 
 풀스택 개발자가 목표인 강지호입니다.', 'jxxoih','jxxo.ih@gmail.com');
 
 
@@ -84,3 +84,8 @@ VALUES
 ("프론트, 백엔드", 0),
 ("프론트엔드", 1),
 ("백엔드", 2);
+
+INSERT INTO `state_mng` (p_idx, sm_state)
+VALUES
+(1, 1)
+;
