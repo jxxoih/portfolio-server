@@ -11,6 +11,6 @@
 ## mysql version | 8.0
 ## port | 3380
 ## host | 127.0.0.1
-## username | jiho
-## password | 1111
-## database | test
+## username | ****
+## password | ****
+## database | ****
