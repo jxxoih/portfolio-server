@@ -92,6 +92,8 @@ CREATE TABLE `state_mng`
     `sm_idx` INT NOT NULL AUTO_INCREMENT COMMENT '고유번호',
     `p_idx` INT NOT NULL COMMENT '사용자 고유번호',
     `sm_state` TINYINT(0) UNSIGNED COMMENT '사용여부 1 = 사용, 0 = 사용안함',
+    `sm_title` VARCHAR(50) NULL DEFAULT '서비스 점검중 입니다.' COMMENT 'title',
+    `sm_context` VARCHAR(100) NULL COMMENT 'context',
     `updated_at`   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '수정 일시',
     `created_at`  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '생성 일시',
     PRIMARY KEY (`sm_idx`)
