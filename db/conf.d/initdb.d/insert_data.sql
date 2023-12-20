@@ -1,6 +1,6 @@
 INSERT INTO `profile` (p_name, p_contact, p_auth_pwd, p_birth, p_description, p_about_title, p_about_context, p_github,p_email)
-VALUES ('강지호', '01012345678','0219', '19990219', '개발자 강지호입니다.', '2년차 개발자', '백엔드 개발자로 일을 시작했지만 프론트에 흥미를 느껴 프론트, 백엔드를 같이 개발, 공부하고 있는 
-풀스택 개발자가 목표인 강지호입니다.', 'jxxoih','jxxo.ih@gmail.com');
+VALUES ('강지호', '01012345678','0219', '19990219', '개발자 강지호입니다.', '', 
+'프론트, 백엔드를 같이 개발, 공부하고 있는 풀스택 개발자가 목표인 강지호입니다.', 'jxxoih','jxxo.ih@gmail.com');
 
 
 INSERT INTO `company` (p_idx, company_nm, emp_status, w_start_date, w_end_date, use_status)
@@ -68,7 +68,8 @@ VALUES
 ("GitHub", "github.png", 4),
 ("Zeplin", "zeplin.png", 5),
 ("Figma", "figma.png", 5),
-("Thymeleaf", "thymeleaf.png", 1);
+("Thymeleaf", "thymeleaf.png", 1),
+("AWS", "aws.png", 2);
 
 
 INSERT INTO `skill_field` (sf_name)
