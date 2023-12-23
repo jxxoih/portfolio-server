@@ -5,7 +5,9 @@ VALUES ('강지호', '01012345678','0219', '19990219', '개발자 강지호입�
 
 INSERT INTO `company` (p_idx, company_nm, emp_status, w_start_date, w_end_date, use_status)
 VALUES (1, '주식회사키키', 1, '2022-04-04', '2023-01-01', 1),
-(1, '제이앤제이', 1, '2023-01-02', '2023-06-30', 1);
+(1, '제이앤제이', 1, '2023-01-02', '2023-06-30', 1),
+(1, '개인프로젝트', 1, '2024-01-01', '2024-12-31', 0)
+;
 
 INSERT INTO `project` (p_idx, c_idx, pro_name, pro_position, pro_detail, pro_start_date, pro_end_date,pro_url, use_status)
 VALUES
